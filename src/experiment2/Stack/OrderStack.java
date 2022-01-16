@@ -31,4 +31,25 @@ public class OrderStack {
         }
     }
 
+     //出栈-pop
+     public int popOrderStack() {
+        if(isEmpty()) {
+            System.out.println("栈空，无法出栈");
+        }
+        int value=orderStack[top];
+        top--;
+        return value;
+    }
+
+    //遍历栈
+    public void printOrderStack() {
+        if(isEmpty()) {
+            System.out.println("栈空，没有数据");
+        }
+        for(int i=top;i>=0;i--) {
+            System.out.print(orderStack[i]);
+        }
+        System.out.println();
+    }
+
 }
